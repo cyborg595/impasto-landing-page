@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="impastostyle.css">
+    <title>Impasto</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" alt="" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation" onclick="toggleMenu()">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>Slices that make you <br> all <span>PIZZA-SSIVE!</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio odit dolores repellat nam quidem sequi aspernatur, animi cum eaque necessitatibus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quo quos at consequuntur totam minima necessitatibus, dolore quisquam voluptas voluptate.</p>
+                <div class="btn">
+                    <a href="#" class="btn1">HOME DELIVERY</a> <a href="#" class="btn2">BOOK A TABLE</a>
+                </div>
+            </div>
+
+            <div class="imgBox">
+                <img src="pizza.png" class="impasto">
+            </div>
+        </div>
+        
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('pizza.png'); changeCircleColor('#81241B')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('pasta.png'); changeCircleColor('#D6D3DC')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('drink.png'); changeCircleColor('rgba(255, 0, 0, 0.774)')"></li>
+        </ul>
+
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/Impastobd" target="_blank"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <script>
+        function imgSlider(anything){
+            document.querySelector('.impasto').src = anything;
+        }
+
+        function changeCircleColor(color){
+            document.querySelector('.circle').style.background = color;
+        }
+
+        function toggleMenu(){
+            document.querySelector('.toggle').classList.toggle('active');
+            document.querySelector('.navigation').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
